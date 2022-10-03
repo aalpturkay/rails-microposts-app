@@ -1,8 +1,8 @@
 <nav class="container m-auto mt-8 flex h-16 items-center justify-between rounded border px-3">
-  <h1 class="text-xl font-extrabold text-orange-400 underline underline-offset-4">MICROPOSTS</h1>
+  <%= link_to "MICROPOSTS", root_path, class: "text-xl font-extrabold text-orange-400 underline underline-offset-4" %>
   <ul class="flex items-center justify-between gap-3">
     <li>
-      <button class="rounded-md bg-orange-400 p-2 font-bold text-white">Sign Up</button>
+      <%= link_to "Sign Up", signup_path, class: "rounded-md bg-orange-400 p-2 font-bold text-white" %>
     </li>
     <li>
       <button class="rounded-md bg-black p-2 font-bold text-white">Sign In</button>
