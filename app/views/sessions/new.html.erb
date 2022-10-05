@@ -5,6 +5,10 @@
     <%= f.email_field :email, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
     <%= f.label :password %>
     <%= f.password_field :password, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
+    <%= f.label :remember_me do %>
+      <%= f.check_box :remember_me %>
+      <span>Remember me</span>
+    <% end %>
     <%= f.submit "Log in", class: "w-64 mx-auto cursor-pointer rounded-md border duration-500 bg-black py-2.5 mt-3 text-sm font-bold text-white transition-all hover:border hover:border-black hover:bg-white hover:text-black" %>
   <% end %>
   <br>

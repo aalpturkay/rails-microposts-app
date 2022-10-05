@@ -12,6 +12,11 @@
   <body>
     <%= render 'layouts/navbar' %>
     <main class="mt-24 flex flex-col items-center justify-center">
+      <% flash.each do |msg_type, msg| %>
+        <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800">
+          <span class="font-medium"><%= msg %></span>
+        </div>
+      <% end %>
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
     </main>
