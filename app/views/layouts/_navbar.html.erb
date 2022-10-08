@@ -1,8 +1,9 @@
-<nav class="container m-auto mt-8 flex h-16 items-center justify-between rounded border px-3">
+<nav class="mx-4 m-auto mt-8 flex h-16 items-center justify-between rounded border px-3">
   <%= link_to "MICROPOSTS", root_path, class: "text-xl font-extrabold text-orange-400 underline underline-offset-4" %>
   <ul class="flex items-center justify-between gap-3">
     <% if logged_in? %>
-      <h1><%= current_user.name %></h1>
+      <li><%= link_to current_user.name, edit_user_path(current_user) %></li>
+      <li><%= link_to "Users", users_path %></li>
       <li>
         <%= link_to "Logout", logout_path, data: { turbo_method: :delete }, class: "rounded-md bg-black p-2 font-bold text-white" %>
       </li>

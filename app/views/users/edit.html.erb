@@ -1,0 +1,17 @@
+<%= provide(:title, "Edit user") %>
+
+<h1 class="text-xl font-bold mb-2">Update your profile</h1>
+<%= render 'shared/error_messages' %>
+<div class="w-[400px] rounded-lg border border-black px-4 py-8 shadow-md">
+  <%= form_with(model: @user, local: true, class: "flex flex-col items-start gap-2 justify-center") do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
+    <%= f.submit "Save changes", class: "w-64 mx-auto cursor-pointer rounded-md border duration-500 bg-black py-2.5 mt-3 text-sm font-bold text-white transition-all hover:border hover:border-black hover:bg-white hover:text-black" %>
+  <% end %>
+</div>

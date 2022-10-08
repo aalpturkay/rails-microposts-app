@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 5e07866fa591ccff83a5274de5c388198b12c0b1
+  branch: main
+  specs:
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -205,6 +213,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.1)
@@ -217,6 +226,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  faker!
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -231,6 +241,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  will_paginate (~> 3.3)
 
 RUBY VERSION
    ruby 3.0.2p107

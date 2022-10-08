@@ -1,0 +1,14 @@
+<%= provide(:title, "All users") %>
+<h1 class="text-2xl font-semibold mb-2">All users</h1>
+
+<div class="my-2">
+    <%= will_paginate %>
+</div>
+
+<ul class="w-96 rounded divide-y border p-2">
+    <%= render @users %>
+</ul>
+
+<div class="my-2">
+    <%= will_paginate %>
+</div>
