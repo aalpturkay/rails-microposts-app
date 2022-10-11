@@ -1,0 +1,3 @@
+<section class="mb-2">
+    Hello, <%= link_to current_user.name, current_user, class: "font-bold" %>. You have <%= pluralize(current_user.microposts.count, "micropost") %>
+</section>

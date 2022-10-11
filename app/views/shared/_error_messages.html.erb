@@ -1,10 +1,10 @@
-<% if @user.errors.any? %>
-  <div id="error_explanation" class="w-[400px] rounded-lg border border-red-600 px-4 py-8 shadow-md mb-2">
+<% if object.errors.any? %>
+  <div id="error_explanation" class="w-96 rounded-lg border border-red-600 px-4 py-8 shadow-md mb-2">
     <div class="text-lg">
-      The form contains <%= pluralize(@user.errors.count, "error") %>.
+      The form contains <%= pluralize(object.errors.count, "error") %>.
     </div>
     <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% object.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>

@@ -1,1 +1,8 @@
 
+<% if logged_in? %>
+  <%= render 'shared/user_info' %>
+  <%= render 'shared/micropost_form' %>
+  <%= render 'shared/feed' %>
+<% else %>
+    <h1>Welcome to app but first you need to sign up</h1>
+<% end %>

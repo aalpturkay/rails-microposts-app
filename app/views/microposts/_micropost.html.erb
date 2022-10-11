@@ -1,0 +1,19 @@
+<li id="micropost-<%= micropost.id %>" class="w-96 flex-col border border-black p-2 shadow-md mb-2">
+    <div class="flex items-center gap-1">
+      <span>by</span>
+      <span class="font-bold"><%= link_to micropost.user.name, micropost.user %></span>
+      <span>-</span>
+      <span class="text-gray-800"><%= time_ago_in_words(micropost.created_at) %> ago</span>
+    </div>
+    <div class="border w-full"></div>
+    <div class="mt-2"><%= micropost.content %></div>
+    <div class="my-2">
+      <%= image_tag micropost.image if micropost.image.attached? %>
+    </div>
+    <% if current_user?(micropost.user) %>
+      <div class="flex justify-end">
+        <%= link_to "Delete", micropost, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "rounded-md bg-red-400 p-2 font-bold text-white" %>
+      </div>
+    <% end %>
+    
+</li>

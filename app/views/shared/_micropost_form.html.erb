@@ -1,0 +1,9 @@
+<%= form_with(model: @micropost, local: true, class: "w-96") do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.text_area :content, placeholder: "What's on your mind?", class: "w-full" %>
+    <div class="flex justify-between items-center">
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+        <%= f.submit "Post", class: "mx-auto cursor-pointer rounded-md border duration-500 bg-black py-2.5 px-3 mt-3 text-sm font-bold text-white transition-all hover:border hover:border-black hover:bg-white hover:text-black" %>
+    </div>    
+    <div class="border w-full my-2"></div>
+<% end %>

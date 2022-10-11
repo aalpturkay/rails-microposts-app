@@ -1,9 +1,9 @@
 <%= provide(:title, "Edit user") %>
 
 <h1 class="text-xl font-bold mb-2">Update your profile</h1>
-<%= render 'shared/error_messages' %>
 <div class="w-[400px] rounded-lg border border-black px-4 py-8 shadow-md">
   <%= form_with(model: @user, local: true, class: "flex flex-col items-start gap-2 justify-center") do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
     <%= f.label :name %>
     <%= f.text_field :name, class: "w-full rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500" %>
     <%= f.label :email %>
