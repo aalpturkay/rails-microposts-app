@@ -2,8 +2,8 @@
   <%= link_to "MICROPOSTS", root_path, class: "text-xl font-extrabold text-orange-400 underline underline-offset-4" %>
   <ul class="flex items-center justify-between gap-3">
     <% if logged_in? %>
-      <li><%= link_to current_user.name, edit_user_path(current_user) %></li>
       <li><%= link_to "Users", users_path %></li>
+      <%= link_to "Profile", current_user, class: "font-bold" %>
       <li>
         <%= link_to "Logout", logout_path, data: { turbo_method: :delete }, class: "rounded-md bg-black p-2 font-bold text-white" %>
       </li>
