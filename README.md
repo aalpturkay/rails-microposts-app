@@ -1,24 +1,33 @@
-# README
+# Microposts App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitter like microposts application.
 
-Things you may want to cover:
+## Versions
+- Ruby: 3.0.2
+- Rails: 7.0.4
 
-* Ruby version
+## Installation Steps
+Clone the project
+```bash
+  git clone https://github.com/aalpturkay/rails-microposts-app.git
+  cd rails-microposts-app
+```
+You need to set postgresql for your system's user and config your config/database.yml file with your credentials.
 
-* System dependencies
+Install gem dependencies and set your db as follows
+```bash
+  bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
+```
 
-* Configuration
+Run test cases
+```bash
+  rails test
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the app with
+```bash
+  rails s
+```
