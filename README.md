@@ -31,3 +31,9 @@ Run the app with
 ```bash
   rails s
 ```
+## What's inside
+Profile page
+
+![image](https://user-images.githubusercontent.com/44681322/195400531-740fb281-5e64-4a56-bbc3-3a5ccedbd81d.png)
+
+
