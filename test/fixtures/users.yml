@@ -10,6 +10,11 @@ galadriel:
   name: Galadriel
   email: galadriel@lotr.com
   password_digest: <%= User.digest('password') %>
+
+isildur:
+  name: Isildur
+  email: isildur@lotr.com
+  password_digest: <%= User.digest('password') %>
   
 <% 30.times do |n| %>
 user_<%= n %>:

@@ -1,0 +1,11 @@
+<% @user ||=current_user %>
+<div class="flex w-fit gap-2 mt-2">
+    <div class="rounded-full bg-black py-2 px-3 text-white">
+        <a href="<%= following_user_path(@user) %>"><%= @user.following.count %> following</a>
+    </div>
+    <div class="rounded-full bg-orange-300 py-2 px-3 text-black">
+        <strong>
+            <a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> followers</a>
+        </strong>
+    </div>
+</div>

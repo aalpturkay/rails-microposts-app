@@ -13,7 +13,12 @@ euruko:
 rails_book:
   content: "I really love the content of the book."
   created_at: <%= 2.weeks.ago %>
-  user: galadriel
+  user: testuser
+
+rubytr:
+  content: "Nice community"
+  created_at: <%= 5.weeks.ago %>
+  user: isildur
 
 most_recent:
   content: "Doing TDD"
