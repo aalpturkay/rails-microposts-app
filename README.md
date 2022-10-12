@@ -3,7 +3,7 @@
 Twitter like microposts application.
 
 ## Versions
-- Ruby: 3.0.2
+- Ruby: 3.1.2
 - Rails: 7.0.4
 
 ## Installation Steps
